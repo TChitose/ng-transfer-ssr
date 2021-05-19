@@ -1,6 +1,6 @@
 import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 import { TransferState , makeStateKey} from '@angular/platform-browser';
 
 @Injectable({

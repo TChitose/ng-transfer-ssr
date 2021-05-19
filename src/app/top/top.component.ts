@@ -1,7 +1,7 @@
 import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
 import { AppStoreFacade } from '../store/app-store/app-store.facade';
 import { isPlatformBrowser } from '@angular/common';
-import { filter, tap } from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 import { TopStore } from './top.store';
 
 @Component({
@@ -30,7 +30,6 @@ export class TopComponent implements OnInit {
     }
 
     this.data$.pipe(
-      tap(x => console.log(x, '1')),
       filter(x => !x),
     ).subscribe(() => {
       // null合体演算子の確認をするならば下をコメントアウト
