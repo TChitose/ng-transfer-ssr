@@ -33,6 +33,7 @@ export class TopComponent implements OnInit {
       tap(x => console.log(x, '1')),
       filter(x => !x),
     ).subscribe(() => {
+      // null合体演算子の確認をするならば下をコメントアウト
       this.appStore.setData(message);
     });
 
